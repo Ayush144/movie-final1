@@ -1,0 +1,121 @@
+.detailsPage {
+    height: 90vh;
+    display: flex;
+    background-position: center;
+    align-items: flex-end;
+}
+
+.banner {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    opacity: 0.9;
+    margin-bottom: 30px;
+}
+
+.movieBackdrop {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+.blurImg {
+    filter: blur(10px);
+}
+
+.details {
+    padding: 15px 50px;
+    width: 40%;
+    color: white;
+    text-align: left;
+    height: fit-content;
+    background-color: #222222;
+    border-radius: 10px;    
+}
+.details:hover {
+    background-color: #333333;
+}
+.movieReleaseDateD {
+    margin-bottom: -5px;
+    font-weight: lighter;
+}
+
+.movieTitleD {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 0 0;
+}
+
+.movieDescriptionD {
+    padding-bottom: 1px;
+}
+
+.rateAndLangD {
+    display: flex;
+    justify-content: space-between;
+}
+
+.movieRatingD {
+    font-size: 15px;
+}
+.movieLanguageD {
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.moviePosterD {
+    width: 400px;
+    border-radius: 10px;    
+}
+
+.moviePosterD:hover {
+    background-color: #222222;
+    animation: none;
+    box-shadow: 0px 0px 10px 10px #2d839b;
+}
+
+.moviePosterD {
+    animation-name: shadowAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes shadowAnimation {
+    from {
+        box-shadow: 0px 0px 15px 15px #111111;
+        transform: scale(1.0);
+    } to {
+        box-shadow: 0px 0px 10px 10px grey;
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 1000px) {
+    .detailsPage {
+        background-position: center;
+        background-size: cover;
+    }
+    .details {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .movieReleaseDateD {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .movieTitleD {
+        font-size: 18px;
+    }
+    .movieDescriptionD {
+        font-size: 14px;
+    }
+    .movieRatingD {
+        font-size: 10px;
+    }
+    .movieLanguageD {
+        font-size: 10px;
+    }
+    .moviePosterD {
+        display: none;
+    }
+}

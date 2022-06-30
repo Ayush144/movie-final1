@@ -1,0 +1,151 @@
+.movieStack {
+    position: relative;
+}
+.eachMovie {
+    background-color: #222222;
+    padding: 10px;
+    height: fit-content;
+    border: 1px solid #121212;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.movieDescription {
+    position: absolute;
+    bottom: 10px;
+    height: 100%;
+    color: white;
+    background-color: #222222;
+    padding: 10px 20px;
+    visibility: hidden;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    z-index: 9999;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.movieStack:hover {
+    transform: scale(1.05);
+}
+
+.movieStack:hover .eachMovie {
+    background-color: #222222;
+    animation-name: rotateSlow;
+    animation-duration: 3s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.movieStack:hover .movieDescription {
+    display: block;
+    visibility: visible;
+    background-color: #333333;
+    height: min-content;
+    text-align: left;
+    box-shadow: 0px 0px 2px 2px grey;
+    animation-name: descShow;
+    animation-duration: 1s;
+    animation-direction: normal;
+    width: fit-content;
+    z-index: 9999;
+}
+
+@media (max-width: 600px) {
+    .movieStack:hover .movieDescription {
+        width: 100%;
+    }
+}
+
+@keyframes rotateSlow {
+    from {
+        transform: rotate(-5deg);
+    } to {
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes descShow {
+    from {
+        opacity: 0.0;
+    } to {
+        opacity: 1.0;
+    }
+}
+
+
+
+
+.movieDescription h1, h2, h3, h4 {
+    margin: 0 0;
+
+}
+
+.rateAndLang {
+    display: flex;
+    justify-content: space-between;
+}
+
+.moviePoster {
+    width: 300px;
+    border-radius: 10px;
+    padding-bottom: 5px;
+}
+
+.movieTitle {
+    font-size: 18px;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+.movieDescription {
+    font-size: 15px;
+}
+
+.movieRating {
+    font-size: 12px;
+    float: left;
+    margin-left: 10px;
+    color: #aaa;
+    margin-top: -32px;
+}
+
+.movieLanguage {
+    font-size: 12px;
+    float: right;
+    margin-right: 10px;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: -32px;
+}
+
+/* Simple responsive  */
+@media (max-width: 1000px) {
+    .eachMovie {
+        padding-top: 12px;
+        width: fit-content;
+    }
+
+    .movieTitle {
+        font-size: 12px;
+    }
+
+    .moviePoster {
+        width: 260px;
+    }
+
+    .movieRating {
+        margin-top: -24px;
+    }
+
+    .movieLanguage {
+        margin-top: -24px;
+    }
+}

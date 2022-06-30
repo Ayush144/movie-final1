@@ -1,0 +1,132 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111111;
+    padding: 0px 25px 0px 25px;
+    position: sticky;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 9999;
+    opacity: 0.95;
+}
+
+.tmdbLogo {
+    width: 80px;
+    height: 80px;
+}
+
+.headerMovieTitle {
+    color: #52d0f4;
+    font-size: 25px;
+    opacity: 0.95;
+}
+
+.headerMovieTitle:hover {
+    color: #9feaff;
+}
+
+.watchLaterBtn {
+    width: 100px;
+    height: 25px;
+    padding: 0px 10px;
+    background-color: transparent;
+    color: white;
+    border-color: #aaa;
+    border-style: solid;
+    border-radius: 20px;
+}
+
+.watchLaterBtn option {
+    background-color: black;
+    border-radius: 20px;
+
+}
+
+.watchLaterBtn:hover {
+    border-color: #52d0f4;
+}
+
+
+/* Grid view images */
+.gridView {
+    background-color: #111111;
+    padding-left: 100px;
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(0, 35vw);
+    grid-row-gap: 20px;
+    grid-column-gap: 40px;
+    padding-bottom: 100px;
+}
+
+/* Simple responsive  */
+@media (max-width: 600px) {
+    .headerMovieTitle {
+        display: none;
+    }
+    .gridView {
+        padding-left: 15%;
+        grid-template-columns: repeat(1, 50vw);
+        grid-template-rows: repeat(1, 110vw);
+    }
+}
+
+@media (min-width: 610px) {
+    .headerMovieTitle {
+        display: none;
+    }
+    .gridView {
+        padding-left: 3%;
+        grid-template-columns: repeat(2, 20vw);
+        grid-template-rows: repeat(1, 70vw);
+        grid-row-gap: 10px;
+        grid-column-gap: 180px;
+    }
+}
+
+@media (min-width: 1000px) {
+    .headerMovieTitle {
+        display: inline;
+        font-size: 20px;
+    }
+    .gridView {
+        padding-left: 4%;
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(1, 35vw);
+        grid-row-gap: 60px;
+        grid-column-gap: 20px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .headerMovieTitle {
+        display: inline;
+        font-size: 25px;
+    }
+    .gridView {
+        padding-left: 100px;
+        padding-top: 20px;
+        grid-template-columns: repeat(4, 20vw);
+        grid-template-rows: repeat(1, 35vw);
+        grid-row-gap: 20px;
+        grid-column-gap: 40px;
+    }
+}
+
+.pageBtn {
+    width: 100px;
+    height: 30px;
+    font-Weight: bold;
+    margin-Bottom: 50px;
+    margin-Right: 20px;
+    background-Color: #45b6d5;
+    font-Size: 17px;
+    border-radius: 20px;
+}
+
+.pageBtn:hover {
+    background-color: #a3dded;
+}
